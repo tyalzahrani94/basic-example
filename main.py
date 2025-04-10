@@ -47,22 +47,15 @@ def create_app() -> Flask:
     # -- Public routes -------------------------------------------------------
     @app.route("/")
     def home():
-        return render_template("home.html", title="Home")
+        return "home"
 
     @app.route("/products")
     def products():
-        sample_products = [
-            {"name": "Juthor", "description": "7‑in‑1 soil‑analysis device"},
-            {"name": "Smart Sensor Hub", "description": "IoT gateway"},
-        ]
-        return render_template("products.html",
-                               title="Products",
-                               products=sample_products)
+        return "products"
 
     @app.route("/about-us")
     def about():
-        return render_template("about.html", title="About Us")
-
+        return "about-us"
     # Health check for Render / LB probes
     @app.route("/healthz")
     def healthz():
