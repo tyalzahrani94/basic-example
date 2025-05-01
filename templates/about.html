@@ -4,20 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmartieeFarm - About Us</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index1.html">
-                    <img src="source/1-removebg-preview.png" alt="SmartieeFarm Logo">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/1-removebg-preview.png') }}" alt="SmartieeFarm Logo">
                     SmartieeFarm
                 </a>
             </div>
             <nav>
                 <ul>
-                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="products.html">Products</a></li>
                     <li class="current"><a href="about.html">About Us</a></li>
                     <li class="lang-switch"><a href="about-ar.html" onclick="switchToArabic(); return false;">العربية</a></li>
@@ -31,22 +31,22 @@
 
         <section class="our-story">
             <h2>Our Story</h2>
-            <p>SmartieeFarm is a Saudi-based technology company dedicated to transforming agriculture through the power of smart farming solutions. Our mission is to bridge traditional agricultural practices with advanced IoT technologies to enable data-driven decision-making for farmers, agronomists, and agricultural investors. Backed by a team of skilled Saudi engineers and developers, we are committed to building sustainable, intelligent farming ecosystems that improve crop yield, optimize resource usage, and reduce operational costs.</p>
+            <p>SmartieeFarm is a Saudi-based technology company dedicated to transforming agriculture through the power of smart farming solutions...</p>
         </section>
 
         <section class="our-vision">
             <h2>Our Vision</h2>
-            <p>To be the leading provider of smart agricultural systems in the MENA region by empowering local farmers with real-time data, intelligent insights, and innovative tools to enhance food security and environmental sustainability.</p>
+            <p>To be the leading provider of smart agricultural systems in the MENA region...</p>
         </section>
 
         <section class="our-values">
             <h2>Our Values</h2>
             <ul>
-                <li><strong>Quality:</strong> We are uncompromising in our commitment to providing the freshest and highest quality produce.</li>
-                <li><strong>Sustainability:</strong> We strive to employ environmentally responsible farming methods to protect our land for future generations.</li>
-                <li><strong>Saudi Pride:</strong> We are a 100% Saudi-owned and operated company, dedicated to showcasing the talent and potential of our people.</li>
-                <li><strong>Community:</strong> We believe in building strong relationships with our customers and contributing positively to our local community.</li>
-                <li><strong>Innovation:</strong> We continuously seek innovative ways to improve our farming practices and deliver the best products.</li>
+                <li><strong>Quality:</strong> We are uncompromising in our commitment...</li>
+                <li><strong>Sustainability:</strong> We strive to employ environmentally responsible farming...</li>
+                <li><strong>Saudi Pride:</strong> We are a 100% Saudi-owned and operated company...</li>
+                <li><strong>Community:</strong> We believe in building strong relationships...</li>
+                <li><strong>Innovation:</strong> We continuously seek innovative ways...</li>
             </ul>
         </section>
 
@@ -57,16 +57,15 @@
                 <li>Advancing the digitization of agriculture</li>
                 <li>Reducing water and resource consumption in farming</li>
                 <li>Increasing local food production efficiency</li>
-                <li>Creating high-value jobs for Saudi youth in the tech and agri sectors</li>
-                <li>Enabling national food security through technology-driven precision agriculture</li>
+                <li>Creating high-value jobs for Saudi youth in tech and agri sectors</li>
+                <li>Enabling national food security through tech-driven precision agriculture</li>
             </ul>
         </section>
 
         <section class="contact-us">
             <h2>Contact Us</h2>
-            <p>Whether you're an investor, agricultural consultant, farmer, or a government stakeholder, we invite you to connect with us and explore how SmartieeFarm can contribute to the future of sustainable agriculture in Saudi Arabia and beyond.</p>
-            <p><strong>Business & Partnerships:</strong> <a href="mailto:info@smartieefarm.com">
-                info@smartieefarm.com</a></p>
+            <p>Whether you're an investor, agricultural consultant, farmer, or a government stakeholder, we invite you to connect with us...</p>
+            <p><strong>Business & Partnerships:</strong> <a href="mailto:info@smartieefarm.com">info@smartieefarm.com</a></p>
             <p><strong>Working Hours:</strong> Sunday – Thursday | 9:00 AM – 5:00 PM (KSA Time)</p>
         </section>
     </main>
@@ -79,20 +78,13 @@
 
     <script>
         function switchToArabic() {
-            // Store language preference
             localStorage.setItem('preferredLanguage', 'ar');
             document.cookie = 'preferredLanguage=ar; path=/; max-age=31536000';
-            
-            // Redirect to Arabic version
             window.location.href = 'about-ar.html';
         }
 
-        // Check for preferred language on load
         document.addEventListener('DOMContentLoaded', function() {
-            const preferredLanguage = localStorage.getItem('preferredLanguage') || 
-                                   getCookie('preferredLanguage');
-            
-            // Redirect to Arabic version if preferred
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || getCookie('preferredLanguage');
             if (preferredLanguage === 'ar' && !window.location.pathname.includes('-ar.html')) {
                 window.location.href = 'about-ar.html';
             }
