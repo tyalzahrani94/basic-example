@@ -22,7 +22,7 @@
                 <ul>
                     <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li><a href="about.html">About Us</a></li>
                     <li class="lang-switch"><a href="index-1-ar.html" onclick="switchToArabic(); return false;">العربية</a></li>
                 </ul>
             </nav>
@@ -91,13 +91,41 @@
         </div>
     </main>
 
+    <section class="container pilot-deployments">
+        <h2>Successful Pilot Deployments</h2>
+        <p class="lead">We've successfully implemented our Smartiee Farm solutions in two distinct pilot locations...</p>
+        <div class="deployment-sites">
+            <div class="site">
+                <h3>Alkarj Farm</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Riyadh Region, Saudi Arabia</p>
+                <p>We utilized advanced IoT sensors including soil moisture sensors, temperature sensors, NPK, and EC sensors...</p>
+                <ul class="achievements">
+                    <li>Increased crop yield</li>
+                    <li>Improved resource efficiency</li>
+                    <li>Boosted productivity in controlled environments</li>
+                </ul>
+                <a href="#" class="button small">Read Case Study</a>
+            </div>
+            <div class="site">
+                <h3>Hafar al-Batin Farm</h3>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Eastern Province, Saudi Arabia</p>
+                <p>Our pilot integrated IoT technologies tailored for soil-based greenhouse farming...</p>
+                <ul class="achievements">
+                    <li>Enhanced monitoring of soil conditions</li>
+                    <li>Improved crop planning and resource usage</li>
+                </ul>
+                <a href="#" class="button small">Read Case Study</a>
+            </div>
+        </div>
+    </section>
+
     <section class="container product-feature">
         <div class="feature-image-container">
             <img src="{{ url_for('static', filename='images/greenhouse.jpg') }}" alt="Product Feature 1">
         </div>
         <div class="feature-text-container">
             <h2>Smarter Hydroponics with IoT Integration</h2>
-            <p>Enhance any hydroponic setup with our advanced IoT solution—designed to optimize growing conditions, automate operations, and provide actionable insights for better crop performance.</p>
+            <p>Enhance any hydroponic setup with our advanced IoT solution...</p>
             <ul>
                 <li>Boost yields by up to 30%</li>
                 <li>Save up to 90% of water</li>
@@ -114,7 +142,7 @@
         </div>
         <div class="feature-text-container">
             <h2>Precision Agriculture with IoT</h2>
-            <p>We monitor every aspect of our farm, from soil health to climate conditions, ensuring perfect growing environments.</p>
+            <p>We monitor every aspect of our farm, from soil health to climate conditions...</p>
             <ul>
                 <li>Real-time data monitoring</li>
                 <li>Automated adjustments</li>
@@ -124,11 +152,12 @@
     </section>
 
     <section class="about full-width-section">
+        <div class="feature-image-container"></div>
         <div class="about-text-container full-width-content">
             <h2>About Smartiee Farm</h2>
             <p>Learn more about our story and our commitment to quality and Saudi human power...</p>
             <p>Our journey began with a vision to...</p>
-            <a href="{{ url_for('about') }}" class="button">Read More</a>
+            <a href="about.html" class="button">Read More</a>
         </div>
     </section>
 
