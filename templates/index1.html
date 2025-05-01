@@ -22,7 +22,7 @@
                 <ul>
                     <li class="current"><a href="{{ url_for('home') }}">Home</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
+                    <a href="{{ url_for('about') }}">About Us</a>
                     <li class="lang-switch"><a href="index-1-ar.html" onclick="switchToArabic(); return false;">العربية</a></li>
                 </ul>
             </nav>
@@ -157,7 +157,7 @@
             <h2>About Smartiee Farm</h2>
             <p>Learn more about our story and our commitment to quality and Saudi human power...</p>
             <p>Our journey began with a vision to...</p>
-            <a href="about.html" class="button">Read More</a>
+            <a href="{{ url_for('about') }}" class="button">Read More</a>
         </div>
     </section>
 
