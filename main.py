@@ -47,7 +47,7 @@ def create_app() -> Flask:
     # -- Public routes -------------------------------------------------------
     @app.route("/")
     def home():
-        return render_template('index-1.html')
+        return render_template('index1.html')
 
     @app.route("/products")
     def products():
