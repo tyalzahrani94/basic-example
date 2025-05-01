@@ -6,7 +6,8 @@
     <meta name="description" content="Smartiee Farm blends advanced IoT and hydroponic technologies to create sustainable, efficient farming systems in Saudi Arabia.">
 
     <title>Smartiee Farm - Your Fresh Choice</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQmXVf9GOilS+d+IOBk9mY1JwVTOMt22zj0tmGJiVn2RZOJjzj0wvjjpj89MaFf5onFyQMcczmwkyA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -14,7 +15,7 @@
         <div class="container">
             <div class="logo">
                 <a href="index1.html">
-                    <img src="source/1-removebg-preview.png" alt="Smartiee Farm Logo">
+                    <img src="static/images/1-removebg-preview.png" alt="Smartiee Farm Logo">
                     Smartiee Farm
                 </a>
             </div>
