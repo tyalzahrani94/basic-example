@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartieeFarm - About Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index1.html">
+                    <img src="source/1-removebg-preview.png" alt="SmartieeFarm Logo">
+                    SmartieeFarm
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index1.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li class="current"><a href="about.html">About Us</a></li>
+                    <li class="lang-switch"><a href="about-ar.html" onclick="switchToArabic(); return false;">العربية</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container about-page">
+        <h1>About SmartieeFarm</h1>
+
+        <section class="our-story">
+            <h2>Our Story</h2>
+            <p>SmartieeFarm is a Saudi-based technology company dedicated to transforming agriculture through the power of smart farming solutions. Our mission is to bridge traditional agricultural practices with advanced IoT technologies to enable data-driven decision-making for farmers, agronomists, and agricultural investors. Backed by a team of skilled Saudi engineers and developers, we are committed to building sustainable, intelligent farming ecosystems that improve crop yield, optimize resource usage, and reduce operational costs.</p>
+        </section>
+
+        <section class="our-vision">
+            <h2>Our Vision</h2>
+            <p>To be the leading provider of smart agricultural systems in the MENA region by empowering local farmers with real-time data, intelligent insights, and innovative tools to enhance food security and environmental sustainability.</p>
+        </section>
+
+        <section class="our-values">
+            <h2>Our Values</h2>
+            <ul>
+                <li><strong>Quality:</strong> We are uncompromising in our commitment to providing the freshest and highest quality produce.</li>
+                <li><strong>Sustainability:</strong> We strive to employ environmentally responsible farming methods to protect our land for future generations.</li>
+                <li><strong>Saudi Pride:</strong> We are a 100% Saudi-owned and operated company, dedicated to showcasing the talent and potential of our people.</li>
+                <li><strong>Community:</strong> We believe in building strong relationships with our customers and contributing positively to our local community.</li>
+                <li><strong>Innovation:</strong> We continuously seek innovative ways to improve our farming practices and deliver the best products.</li>
+            </ul>
+        </section>
+
+        <section class="vision-2030">
+            <h2>Aligned with Saudi Vision 2030</h2>
+            <p>SmartieeFarm supports Saudi Arabia's Vision 2030 through:</p>
+            <ul>
+                <li>Advancing the digitization of agriculture</li>
+                <li>Reducing water and resource consumption in farming</li>
+                <li>Increasing local food production efficiency</li>
+                <li>Creating high-value jobs for Saudi youth in the tech and agri sectors</li>
+                <li>Enabling national food security through technology-driven precision agriculture</li>
+            </ul>
+        </section>
+
+        <section class="contact-us">
+            <h2>Contact Us</h2>
+            <p>Whether you're an investor, agricultural consultant, farmer, or a government stakeholder, we invite you to connect with us and explore how SmartieeFarm can contribute to the future of sustainable agriculture in Saudi Arabia and beyond.</p>
+            <p><strong>Business & Partnerships:</strong> <a href="mailto:info@smartieefarm.com">
+                info@smartieefarm.com</a></p>
+            <p><strong>Working Hours:</strong> Sunday – Thursday | 9:00 AM – 5:00 PM (KSA Time)</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SmartieeFarm. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchToArabic() {
+            // Store language preference
+            localStorage.setItem('preferredLanguage', 'ar');
+            document.cookie = 'preferredLanguage=ar; path=/; max-age=31536000';
+            
+            // Redirect to Arabic version
+            window.location.href = 'about-ar.html';
+        }
+
+        // Check for preferred language on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 
+                                   getCookie('preferredLanguage');
+            
+            // Redirect to Arabic version if preferred
+            if (preferredLanguage === 'ar' && !window.location.pathname.includes('-ar.html')) {
+                window.location.href = 'about-ar.html';
+            }
+        });
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+</body>
+</html>

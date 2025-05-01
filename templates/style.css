@@ -1,0 +1,585 @@
+/* style.css */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #1d1d1f;
+    background-color: #fff;
+    padding-top: 60px; /* Adjust padding for fixed header responsiveness */
+}
+
+.container {
+    max-width: 1200px; /* Slightly wider for better desktop view */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 0.8rem 0; /* Adjust header padding for responsiveness */
+    border-bottom: 1px solid #eee;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Add padding to container in header */
+}
+
+.logo {
+    padding-left: 0; /* Remove left padding for better alignment on smaller screens */
+}
+
+.logo a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+header .logo a img {
+    height: 60px; /* Adjust logo height for responsiveness */
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+nav {
+    padding-right: 0; /* Remove right padding for better alignment on smaller screens */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 15px; /* Adjust spacing between nav items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: opacity 0.2s ease;
+}
+
+nav ul li a:hover {
+    opacity: 0.8;
+}
+
+nav ul li.lang-switch {
+    margin-left: 20px; /* Adjust spacing for language switch */
+}
+
+nav ul li.lang-switch a {
+    color: #999;
+    font-size: 0.8rem;
+}
+
+main {
+    padding-top: 2rem;
+    padding-bottom: 3rem; /* Adjust main padding */
+}
+
+main.products-page {
+    padding-top: 3rem; /* Adjust products page padding */
+    padding-bottom: 3rem;
+}
+
+/* Hero Section Styles */
+.hero {
+    padding: 60px 0; /* Adjust hero padding */
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: row; /* Default to row for larger screens */
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px; /* Adjust gap */
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 15px; /* Add some spacing from the image */
+}
+
+.hero-text h1 {
+    font-size: 2rem; /* Adjust heading size */
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.8rem; /* Adjust margin */
+}
+
+.hero-text p {
+    font-size: 1rem; /* Adjust paragraph size */
+    color: #666;
+    line-height: 1.6; /* Adjust line height */
+    margin-bottom: 1.5rem; /* Adjust margin */
+    text-align: left;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 10px 20px; /* Adjust button padding */
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 0.9rem; /* Adjust button font size */
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-bottom: 0.5rem; /* Add some bottom margin for stacked buttons */
+}
+
+.hero-buttons a.primary {
+    margin-right: 10px;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap; /* Allow stats to wrap on smaller screens */
+    justify-content: space-around;
+    margin-top: 30px; /* Adjust margin */
+    padding: 20px; /* Adjust padding */
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+.hero-stats .stat-card {
+    text-align: left;
+    flex-basis: calc(50% - 10px); /* Two cards per row on medium screens */
+    margin-bottom: 15px; /* Add margin between stat cards */
+}
+
+.hero-stats .stat-card:not(:last-child) {
+    border-right: none; /* Remove border for stacked cards */
+}
+
+@media (min-width: 768px) {
+    .hero-stats {
+        flex-wrap: nowrap; /* Keep cards in a row on larger screens */
+    }
+
+    .hero-stats .stat-card {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+
+    .hero-stats .stat-card:not(:last-child) {
+        border-right: 1px solid #eee;
+    }
+}
+
+.hero-stats .stat-card h3 {
+    font-size: 1.5rem; /* Adjust stat heading size */
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 0.3rem;
+    padding-left: 10px;
+}
+
+.hero-stats .stat-card p {
+    font-size: 0.8rem; /* Adjust stat paragraph size */
+    color: #555;
+    padding-right: 10px;
+}
+
+/*  Responsive Circles for Hero Background */
+/* .hero::before, */
+/* .hero::after { */
+    /* content: ""; */
+    /* display: block; */
+/*     border-radius: 50%;
+    background-color: #e0f7fa; /* Light blue-green, adjust color as needed */
+    /* opacity: 0.6; Adjust opacity as needed */
+    /* position: absolute; */
+    /* z-index: 0; Place behind content */
+/* } */ 
+
+/* .hero::before {
+    width: 15vw;
+    height: 15vw;
+    top: 5vw;
+    right: 10vw;
+} */
+
+/* .hero::after {
+    width: 20vw;
+    height: 20vw;
+    bottom: 10vw;
+    left: 5vw;
+}  */
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column; /* Stack text and image on smaller screens */
+        align-items: stretch; /* Make items take full width */
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 20px; /* Add margin below text */
+    }
+
+    .hero-text h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-text p {
+        font-size: 0.95rem;
+    }
+
+    .hero-image img {
+        margin-bottom: 20px; /* Add margin below image */
+    }
+
+    
+}
+
+/* Updated Homepage Panels to Cards with Images and Zoom Effect */
+.homepage-panels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax */
+    gap: 15px; /* Adjust gap */
+    padding: 15px; /* Adjust padding */
+    margin-top: 30px; /* Adjust margin */
+}
+
+.homepage-panels .card {
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.homepage-panels .card img {
+    width: 100%;
+    height: auto; /* Make image height responsive */
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    display: block;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.homepage-panels .card img:hover {
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.homepage-panels .card-content {
+    padding: 15px; /* Adjust padding */
+}
+
+.homepage-panels .card-content h2 {
+    font-size: 1.2rem; /* Adjust heading size */
+    margin-bottom: 0.6rem;
+    color: #333;
+}
+
+.homepage-panels .card-content p {
+    font-size: 0.9rem; /* Adjust paragraph size */
+    color: #555;
+    margin-bottom: 0.8rem;
+    line-height: 1.4;
+}
+
+.homepage-panels .card-content ul {
+    list-style: none;
+    padding-left: 15px; /* Adjust padding */
+    margin-bottom: 1rem;
+}
+
+.homepage-panels .card-content ul li {
+    color: #495057;
+    font-size: 0.85rem; /* Adjust list item size */
+    margin-bottom: 0.3rem;
+    padding-left: 18px;
+    position: relative;
+}
+
+.homepage-panels .card-content ul li::before {
+    content: "\27A4";
+    color: #005353;
+    position: absolute;
+    left: 0;
+    top: 0.1rem; /* Adjust vertical alignment */
+    font-size: 0.7rem;
+}
+
+/* About Preview Section */
+.about-preview {
+    margin-top: 2rem; /* Adjust margin */
+    margin-bottom: 2rem; /* Adjust margin */
+    text-align: center;
+    padding: 2rem 20px; /* Add horizontal padding */
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.about-preview h2 {
+    font-size: 1.75rem; /* Adjust heading size */
+    margin-bottom: 0.8rem;
+}
+
+.about-preview p {
+    color: #666;
+    margin-bottom: 1.5rem; /* Adjust margin */
+    font-size: 0.95rem; /* Adjust paragraph size */
+}
+
+/* Product Feature Section */
+.product-feature {
+    display: flex;
+    flex-direction: column; /* Stack on smaller screens */
+    margin-top: 3rem; /* Adjust margin */
+    margin-bottom: 3rem; /* Adjust margin */
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: stretch; /* Make items full width on small screens */
+}
+.product-feature .feature-text-container ul {
+    list-style-type: disc; /* Ensure bullets are displayed */
+    padding-left: 20px; /* Adjust as needed for bullet indentation */
+    margin-left: 0; /* Remove default left margin */
+    margin-bottom: 1rem;
+}
+
+.product-feature .feature-text-container ul li {
+    margin-left: 0; /* Remove default list item left margin */
+    padding-left: 10px; /* Adjust spacing between bullet and text */
+    text-indent: -10px; /* Move the bullet to the left by the padding amount */
+    margin-bottom: 0.5rem;
+    color: #555;
+    font-size: 0.85rem;
+}
+
+
+@media (min-width: 768px) {
+    .product-feature {
+        flex-direction: row; /* Row layout on larger screens */
+        align-items: center;
+    }
+
+    .product-feature.reversed {
+        flex-direction: row-reverse;
+    }
+}
+
+.product-feature .feature-image-container {
+    flex: 1;
+}
+
+.product-feature .feature-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+}
+
+.product-feature .feature-text-container {
+    flex: 1;
+    padding: 1.5rem; /* Adjust padding */
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .product-feature .feature-text-container {
+        text-align: left; /* Ensure left alignment on larger screens */
+    }
+
+    .product-feature.reversed .feature-text-container {
+        text-align: right;
+    }
+}
+
+.product-feature .feature-text-container h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+    margin-bottom: 0.8rem;
+}
+
+.product-feature .feature-text-container p {
+    color: #666;
+    margin-bottom: 1rem; /* Adjust margin */
+    font-size: 0.9rem; /* Adjust paragraph size */
+}
+
+.product-feature .feature-text-container ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin-bottom: 1rem; /* Adjust margin */
+}
+
+.product-feature .feature-text-container ul li {
+    margin-bottom: 0.4rem;
+    color: #555;
+    font-size: 0.85rem; /* Adjust list item size */
+}
+
+/* Pilot Deployments Section */
+.pilot-deployments {
+    margin-top: 3rem; /* Adjust margin */
+    margin-bottom: 3rem; /* Adjust margin */
+    padding: 2rem 20px; /* Adjust padding */
+    background-color: #e9f7ef;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pilot-deployments h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+    margin-bottom: 0.8rem;
+    color: #28a745;
+}
+
+.pilot-deployments .lead {
+    font-size: 1rem; /* Adjust lead text size */
+    color: #555;
+    margin-bottom: 1.5rem; /* Adjust margin */
+}
+
+.pilot-deployments .deployment-sites {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax */
+    gap: 20px; /* Adjust gap */
+    margin-top: 1.5rem; /* Adjust margin */
+}
+
+.pilot-deployments .site {
+    background-color: #fff;
+    padding: 1.5rem; /* Adjust padding */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.pilot-deployments .site h3 {
+    font-size: 1.2rem; /* Adjust heading size */
+    margin-bottom: 0.4rem;
+    color: #333;
+}
+
+.pilot-deployments .site .location {
+    color: #777;
+    font-size: 0.8rem; /* Adjust location size */
+    margin-bottom: 0.}
+
+/* style.css */
+
+/* style.css */
+
+/* ... other styles ... */
+
+.full-width-section.about {
+    width: 100%; /* Make the section full width */
+    padding-top: 4rem; /* Adjust padding as needed */
+    padding-bottom: 4rem; /* Adjust padding as needed */
+    border-radius: 0; /* Remove border-radius if full width */
+    box-shadow: none; /* Remove box-shadow if desired for full width */
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    /* Or any color you prefer */
+    overflow: hidden; /* To contain background image */
+    flex-direction: row; /* Default to row */
+}
+
+.full-width-section.about .feature-image-container {
+    flex: 0 0 40%; /* Fixed width for the image container */
+    background-image: url('source/about_us_image.jpg'); /* Replace with your actual image URL */
+    background-size: cover;
+    background-position: center;
+    min-height: 300px; /* Adjust minimum height as needed */
+}
+
+.full-width-section.about .about-text-container.full-width-content {
+    flex: 1; /* Takes up the remaining space */
+    padding: 2rem 20px; /* Add horizontal padding */
+    text-align: left;
+}
+
+.full-width-section.about .about-text-container.full-width-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.full-width-section.about .about-text-container.full-width-content p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.full-width-section.about .about-text-container.full-width-content .button {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    background-color: #007bff; /* Example button color */
+    color: #fff;
+}
+
+.full-width-section.about .about-text-container.full-width-content .button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive adjustments for the full-width about section (Option 2) */
+@media (max-width: 768px) {
+    .full-width-section.about {
+        flex-direction: column; /* Stack image and text */
+    }
+
+    .full-width-section.about .feature-image-container {
+        width: 100%;
+        min-height: 200px; /* Adjust height for smaller screens */
+    }
+
+    .full-width-section.about .about-text-container.full-width-content {
+        padding: 1.5rem;
+        text-align: left;
+    }
+
+    .full-width-section.about .about-text-container.full-width-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .full-width-section.about .about-text-container.full-width-content p {
+        font-size: 0.95rem;
+    }
+}
