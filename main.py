@@ -56,6 +56,10 @@ def create_app() -> Flask:
     @app.route("/about")
     def about():
         return render_template('about.html')
+      
+    @app.route("/privacy")
+    def home():
+        return render_template('privacy.html')
     # Health check for Render / LB probes
     @app.route("/healthz")
     def healthz():
