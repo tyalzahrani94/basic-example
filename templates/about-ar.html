@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سمارتي فارم - من نحن</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index-1-ar.html">
+                    سمارتي فارم
+                    <img src="source/1-removebg-preview.png" alt="شعار سمارتي فارم">
+                    
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="lang-switch"><a href="about.html" onclick="switchToEnglish(); return false;">English</a></li>
+                    <li class="current"><a href="about-ar.html">من نحن</a></li>
+                    <li><a href="products-ar.html">المنتجات</a></li>
+                    <li><a href="index-1-ar.html">الرئيسية</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container about-page">
+        <h1>من نحن في سمارتي فارم</h1>
+
+        <section class="our-story">
+            <h2>قصتنا</h2>
+            <p>سمارتي فارم هي شركة تقنية سعودية متخصصة في إحداث تحول في قطاع الزراعة من خلال قوة حلول الزراعة الذكية. مهمتنا هي ربط ممارسات الزراعة التقليدية بتقنيات إنترنت الأشياء المتقدمة لتمكين اتخاذ قرارات مستندة إلى البيانات للمزارعين والمهندسين الزراعيين والمستثمرين الزراعيين. بدعم من فريق من المهندسين والمطورين السعوديين، نحن ملتزمون ببناء أنظمة زراعية مستدامة وذكية تعمل على تحسين إنتاجية المحاصيل، وتحسين استخدام الموارد، وتقليل التكاليف التشغيلية.</p>
+        </section>
+
+        <section class="our-vision">
+            <h2>رؤيتنا</h2>
+            <p>أن نكون المزود الرائد لأنظمة الزراعة الذكية في منطقة الشرق الأوسط وشمال أفريقيا من خلال تمكين المزارعين المحليين ببيانات في الوقت الفعلي، ورؤى ذكية، وأدوات مبتكرة لتعزيز الأمن الغذائي والاستدامة البيئية.</p>
+        </section>
+
+        <section class="our-values">
+            <h2>قيمنا</h2>
+            <ul>
+                <li><strong>الجودة:</strong> نحن لا نتنازل عن التزامنا بتقديم المنتجات الطازجة والأعلى جودة.</li>
+                <li><strong>الاستدامة:</strong> نسعى جاهدين لتطبيق أساليب زراعية مسؤولة بيئياً لحماية أرضنا للأجيال القادمة.</li>
+                <li><strong>الفخر السعودي:</strong> نحن شركة سعودية 100%، ملتزمون بإظهار مواهب وإمكانات شعبنا.</li>
+                <li><strong>المجتمع:</strong> نؤمن ببناء علاقات قوية مع عملائنا والمساهمة بشكل إيجابي في مجتمعنا المحلي.</li>
+                <li><strong>الابتكار:</strong> نسعى باستمرار لإيجاد طرق مبتكرة لتحسين ممارساتنا الزراعية وتقديم أفضل المنتجات.</li>
+            </ul>
+        </section>
+
+        <section class="vision-2030">
+            <h2>تماشياً مع رؤية المملكة 2030</h2>
+            <p>تدعم سمارتي فارم رؤية المملكة 2030 من خلال:</p>
+            <ul>
+                <li>تعزيز رقمنة القطاع الزراعي</li>
+                <li>تقليل استهلاك المياه والموارد في الزراعة</li>
+                <li>زيادة كفاءة إنتاج الغذاء المحلي</li>
+                <li>توفير فرص عمل ذات قيمة مضافة للشباب السعودي في قطاعي التقنية والزراعة</li>
+                <li>تمكين الأمن الغذائي الوطني من خلال الزراعة الدقيقة القائمة على التكنولوجيا</li>
+            </ul>
+        </section>
+
+        <section class="contact-us">
+            <h2>تواصل معنا</h2>
+            <p>سواء كنت مستثمرًا، أو مستشارًا زراعيًا، أو مزارعًا، أو جهة حكومية معنية، فإننا ندعوك للتواصل معنا واستكشاف كيف يمكن لسمارتي فارم المساهمة في مستقبل الزراعة المستدامة في المملكة العربية السعودية وخارجها.</p>
+            <p><strong>الاستفسارات:</strong> <a href="mailto:info@smartieefarm.com">info@smartieefarm.com</a></p>
+            
+            <p><strong>ساعات العمل:</strong> الأحد – الخميس | 9:00 صباحاً – 5:00 مساءً (بتوقيت المملكة العربية السعودية)</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 سمارتي فارم. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchToEnglish() {
+            // Store language preference
+            localStorage.setItem('preferredLanguage', 'en');
+            document.cookie = 'preferredLanguage=en; path=/; max-age=31536000';
+            
+            // Redirect to English version
+            window.location.href = 'about.html';
+        }
+
+        // Check for preferred language on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') || 
+                                   getCookie('preferredLanguage');
+            
+            // Redirect to English version if preferred
+            if (preferredLanguage === 'en' && window.location.pathname.includes('-ar.html')) {
+                window.location.href = 'about.html';
+            }
+        });
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+</body>
+</html>

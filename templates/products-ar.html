@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سمارتي فارم - المنتجات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index-1-ar.html">
+                    سمارتي فارم
+                    <img src="source/1.png" alt="شعار سمارتي فارم">
+                    
+
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-1-ar.html">الرئيسية</a></li>
+                    <li class="current"><a href="products-ar.html">المنتجات</a></li>
+                    <li><a href="about-ar.html">من نحن</a></li>
+                    <li class="lang-switch"><a href="products.html" onclick="switchToEnglish(); return false;">English</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container products-page">
+
+         <section class="featured-products">
+            <h2>المنتجات المميزة</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="source/box.png" alt="محلول دايم">
+                    <h3>جهاز دايم</h3>
+                    <p>يوفر جهاز تحليل التربة الذكي من سمارتي فارم قياسات دقيقة وموثوقة لمعلمات التربة الرئيسية.</p>
+                    <a href="product-details-1-ar.html" class="button small">عرض التفاصيل</a>
+                </div>
+                <div class="product-card">
+                    <img src="placeholder-product.jpg" alt="المنتج 2">
+                    <h3>اسم المنتج 2</h3>
+                    <p>وصف قصير للمنتج 2.</p>
+                    <a href="#" class="button small">عرض التفاصيل</a>
+                </div>
+                <div class="product-card">
+                    <img src="placeholder-product.jpg" alt="المنتج 3">
+                    <h3>اسم المنتج 3</h3>
+                    <p>وصف قصير للمنتج 3.</p>
+                    <a href="#" class="button small">عرض التفاصيل</a>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 سمارتي فارم. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchToEnglish() {
+            // Store language preference
+            localStorage.setItem('preferredLanguage', 'en');
+            document.cookie = 'preferredLanguage=en; path=/; max-age=31536000';
+
+            // Redirect to English version
+            window.location.href = 'products.html';
+        }
+
+        // Check for preferred language on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') ||
+                                        getCookie('preferredLanguage');
+
+            // Redirect to English version if preferred
+            if (preferredLanguage === 'en' && window.location.pathname.includes('-ar.html')) {
+                window.location.href = 'products.html';
+            }
+        });
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+</body>
+</html>

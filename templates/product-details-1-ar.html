@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اسم المنتج 1 - سمارتي فارم</title>
+    <link rel="stylesheet" href="product-details.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index-1-ar.html">
+                    <img src="source/1.png" alt="شعار سمارتي فارم"> سمارتي فارم
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index-1-ar.html">الرئيسية</a></li>
+                    <li><a href="products-ar.html">المنتجات</a></li>
+                    <li><a href="about-ar.html">من نحن</a></li>
+                    <li class="lang-switch"><a href="product-details-1.html" onclick="switchToEnglish(); return false;">English</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container product-detail-page">
+        <div class="product-detail">
+            <div class="product-image">
+                <img src="source/box.png" alt="صورة مفصلة لاسم المنتج 1">
+            </div>
+            <div class="product-info">
+                <h1>محلول دايم</h1>
+                <p class="product-price">السعر: 1000 ريال</p>
+                <p class="product-full-description">يدمج هذا الجهاز القوي أجهزة استشعار لقياس:</p>
+                <ul>
+                    <li>رطوبة التربة (%): يقيس محتوى الماء الحجمي للتربة.</li>
+                    <li>NPK (جزء في المليون): يحدد كمية تركيز النيتروجين (N) والفوسفور (P) والبوتاسيوم (K) بأجزاء في المليون.</li>
+                    <li>درجة حرارة التربة (°C/°F): يراقب درجة حرارة البيئة التربة.</li>
+                    <li>التوصيل الكهربائي (ميكروسيمنز/سم أو مليسيمنز/سم): يقيس التوصيل الكهربائي لمحلول التربة، مما يشير إلى الملوحة وتوافر المغذيات.</li>
+                    </ul>
+
+                <a href="products-ar.html" class="button secondary">العودة إلى المنتجات</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 سمارتي فارم. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        function switchToEnglish() {
+            // Store language preference
+            localStorage.setItem('preferredLanguage', 'en');
+            document.cookie = 'preferredLanguage=en; path=/; max-age=31536000';
+
+            // Redirect to English version
+            window.location.href = 'product-details-1.html';
+        }
+
+        // Check for preferred language on load
+        document.addEventListener('DOMContentLoaded', function() {
+            const preferredLanguage = localStorage.getItem('preferredLanguage') ||
+                                        getCookie('preferredLanguage');
+
+            // Redirect to English version if preferred
+            if (preferredLanguage === 'en' && window.location.pathname.includes('-ar.html')) {
+                window.location.href = 'product-details-1.html';
+            }
+        });
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+    </script>
+</body>
+</html>
