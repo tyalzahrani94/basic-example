@@ -49,7 +49,7 @@ def create_app() -> Flask:
     def home():
         return render_template('index1.html')
     
-     @app.route("/ar")
+    @app.route("/ar")
     def home_ar():
         return render_template('index1-ar.html')
 
