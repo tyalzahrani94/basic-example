@@ -57,9 +57,17 @@ def create_app() -> Flask:
     def products():
         return "products"
 
+    @app.route("/ar/products")
+    def products_ar():
+        return "products ar"
+
     @app.route("/about")
     def about():
         return render_template('about.html')
+    
+    @app.route("/ar/about")
+    def about_ar():
+        return render_template('about-ar.html')
       
     @app.route("/privacy")
     def privacy():
