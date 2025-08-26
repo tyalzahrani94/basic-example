@@ -13,7 +13,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="{{ url_for('home-ar') }}">
+                <a href="{{ url_for('home_ar') }}">
                     <img src="{{ url_for('static', filename='images/1-removebg-preview.png') }}" alt="شعار سمارتي فارم">
                     سمارتيي فارم
                 </a>
@@ -21,10 +21,10 @@
 
             <nav>
                 <ul>
-                    <li class="current"><a href="index-1-ar.html">الرئيسية</a></li>
+                    <li class="current"><a href="{{ url_for('home_ar') }}">الرئيسية</a></li>
                     <li><a href="products-ar.html">المنتجات</a></li>
                     <li><a href="about-ar.html">من نحن</a></li>
-                    <li class="lang-switch"><a href="index1.html" onclick="switchToEnglish(); return false;">English</a></li>
+                    <li class="lang-switch"><a href="{{ url_for('home') }}" onclick="switchToEnglish(); return false;">English</a></li>
                 </ul>
             </nav>
         </div>
