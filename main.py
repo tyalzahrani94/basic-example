@@ -48,6 +48,10 @@ def create_app() -> Flask:
     @app.route("/")
     def home():
         return render_template('index1.html')
+    
+     @app.route("/ar")
+    def home_ar():
+        return render_template('index1-ar.html')
 
     @app.route("/products")
     def products():
