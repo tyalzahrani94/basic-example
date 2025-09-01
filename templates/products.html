@@ -11,8 +11,8 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="index1.html">
-                    <img src="source/1.png" alt="Smartiee Farm Logo">
+                <a href="{{ url_for('home') }}">
+                    <img src="{{ url_for('static', filename='images/1.png') }}" alt="Smartiee Farm Logo">
                     Smartiee Farm
 
                 </a>
@@ -20,9 +20,9 @@
             <nav>
                 <ul>
                     <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li class="current"><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li class="lang-switch"><a href="products-ar.html" onclick="switchToArabic(); return false;">العربية</a></li>
+                    <li class="current"><a href="{{ url_for('products') }}">Products</a></li>
+                    <li><a href="{{ url_for('about') }}">About Us</a></li>
+                    <li class="lang-switch"><a href="{{ url_for('products-ar') }}" onclick="switchToArabic(); return false;">العربية</a></li>
                 </ul>
             </nav>
         </div>
@@ -39,7 +39,7 @@
                         <span class="availability-indicator available"></span> </div>
                 </div>
                 <div class="product-card">
-                    <img src="placeholder-product.jpg" alt="Product 2">
+                    <img src="{{ url_for('static', filename='images/placeholder-product.jpg') }}" alt="Product 2">
                     <div class="product-info">
                         <h3>Product Name 2</h3>
                         <p>Short description of product 2.</p>
@@ -47,7 +47,7 @@
                         <span class="availability-indicator unavailable"></span> </div>
                 </div>
                 <div class="product-card">
-                    <img src="placeholder-product.jpg" alt="Product 3">
+                    <img src="{{ url_for('static', filename='images/placeholder-product.jpg') }}" alt="Product 3">
                     <div class="product-info">
                         <h3>Product Name 3</h3>
                         <p>Short description of product 3.</p>
